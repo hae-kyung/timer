@@ -81,15 +81,15 @@ with col_left:
     status_col1,status_col2,status_col3 = st.columns(3)
     with status_col1: #"타이머"
         if current_status=="running":
-            st.markdown('타이머',help="타이머가 실행중입니다.")
+            st.markdown('**타이머**',help="타이머가 실행중입니다.")
         elif current_status=="paused":
-            st.markdown('타이머',help="타이머가 일시 정지 되었습니다.")
+            st.markdown('**타이머**',help="타이머가 일시 정지 되었습니다.")
         elif current_status=="completed":
-            st.markdown('타이머',help="타이머가 완료되었습니다!")
+            st.markdown('**타이머**',help="타이머가 완료되었습니다!")
         else :
-            st.markdown('타이머',help="타이머가 대기중입니다.")
+            st.markdown('**타이머**',help="타이머가 대기중입니다.")
     with status_col3: #퍼센트(진행율)
-        st.markdown(f"{int(progress*100)}%") #왼쪽정렬이 되기 떄문에
+        st.markdown(f'<p style="text-aligin:right;"><strong>{int(progress*100)}%</strong></p>',unsafe_allow_html=True) #왼쪽정렬이 되기 떄문에 html 태그 써줘야 함
 
 
 with col_right:
