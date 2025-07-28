@@ -89,7 +89,7 @@ with col_left:
         else :
             st.markdown('타이머',help="타이머가 대기중입니다.")
     with status_col3: #퍼센트(진행율)
-        st.markdown(f"{int(progress*100)%}") #왼쪽정렬이 되기 떄문에
+        st.markdown(f"{int(progress*100)}%") #왼쪽정렬이 되기 떄문에
 
 
 with col_right:
