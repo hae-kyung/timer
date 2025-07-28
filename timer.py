@@ -89,8 +89,7 @@ with col_left:
         else :
             st.markdown('**타이머**',help="타이머가 대기중입니다.")
     with status_col3: #퍼센트(진행율)
-        st.markdown(f'<p style="text-align:right;"><strong>{int(progress*100)}%</strong></p>',unsafe_allow_html=True) #왼쪽정렬이 되기 떄문에 html 태그 써줘야 함
-
+        st.markdown(f'<p style="text-align:right;"><strong>{int(progress*100)}%</strong></p>',unsafe_allow_html=True) #왼쪽정렬이 되기 때문에 html 태그 써줘야 함
 
 with col_right:
     pass
