@@ -90,6 +90,22 @@ with col_left:
             st.markdown('**타이머**',help="타이머가 대기중입니다.")
     with status_col3: #퍼센트(진행율)
         st.markdown(f'<p style="text-align:right;"><strong>{int(progress*100)}%</strong></p>',unsafe_allow_html=True) #왼쪽정렬이 되기 때문에 html 태그 써줘야 함
-
+    
+    #시간표시 스타일 적용
+    st.markdown("""
+    <style>
+    /* 버튼 컨테이너 가운데 정렬 */
+    .stColumns > div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    </style>
+    """, unsafe_allow_html=True)
+    st.markdown(f"""
+    <div class="timer-time" style="text-align: center; font-size: 4rem; font-weight: bold; margin: 2rem 0;"> #margin은 공백
+        {st.session_state.remaining_seconds}
+    </div>
+    """, unsafe_allow_html=True)
 with col_right:
-    pass
+
