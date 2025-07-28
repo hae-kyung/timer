@@ -103,9 +103,10 @@ with col_left:
     </style>
     """, unsafe_allow_html=True)
     st.markdown(f"""
-    <div class="timer-time" style="text-align: center; font-size: 4rem; font-weight: bold; margin: 2rem 0;"> #margin은 공백
+    <div class="timer-time" style="text-align: center; font-size: 4rem; font-weight: bold; margin: 2rem 0;">
         {st.session_state.remaining_seconds}
     </div>
     """, unsafe_allow_html=True)
 with col_right:
+    pass
 
